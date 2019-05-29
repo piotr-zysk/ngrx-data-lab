@@ -58,7 +58,7 @@ export class VillainsComponent implements OnInit {
   }
 
   select(villain: Villain) {
-    this.selected = <any>{};
+    this.selected = villain;
   }
 
   update(villain: Villain) {
