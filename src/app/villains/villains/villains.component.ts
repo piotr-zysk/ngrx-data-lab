@@ -45,7 +45,7 @@ export class VillainsComponent implements OnInit {
   }
 
   enableAddMode() {
-    this.selected = null;
+    this.selected = <any>{};
   }
 
   getVillains() {
@@ -68,8 +68,8 @@ export class VillainsComponent implements OnInit {
       .pipe(finalize(() => (this.loading = false)))
       .subscribe(
         () =>
-          (this.villains = this.villains.map(
-            h => (h.id === villain.id ? villain : h)
+          (this.villains = this.villains.map(h =>
+            h.id === villain.id ? villain : h
           ))
       );
   }
